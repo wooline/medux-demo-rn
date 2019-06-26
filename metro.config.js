@@ -14,4 +14,7 @@ module.exports = {
       },
     }),
   },
+  resolver: {
+    resolverMainFields: ['typescript', 'browser', 'main'],
+  },
 };
