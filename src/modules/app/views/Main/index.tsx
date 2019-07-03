@@ -1,19 +1,19 @@
-import {Text, View} from 'react-native';
+import {createAppContainer, createBottomTabNavigator} from 'react-navigation';
 
-import Photos from 'src/modules/photos/views/Main';
-import React from 'react';
+import {PhotosNavigator} from 'src/modules/photos';
+import {VideosNavigator} from 'src/modules/videos';
 
-interface Props {}
-
-class Component extends React.PureComponent<Props> {
-  public render() {
-    return (
-      <View>
-        <Text>Welcome to ative2!</Text>
-        <Photos />
-      </View>
-    );
+const TabNavigator = createBottomTabNavigator(
+  {
+    Photos: PhotosNavigator,
+    Videos: VideosNavigator,
+  },
+  {
+    tabBarOptions: {
+      activeTintColor: 'blue',
+      inactiveTintColor: 'green',
+    },
   }
-}
+);
 
-export default Component;
+export default createAppContainer(TabNavigator);

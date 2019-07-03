@@ -2,10 +2,10 @@ import {createStackNavigator} from 'react-navigation';
 import {loadView} from '@medux/react';
 import {moduleGetter} from 'src/modules';
 
-const List = loadView(moduleGetter, 'photos', 'List');
-const Details = loadView(moduleGetter, 'photos', 'Details');
+const List = loadView(moduleGetter, 'videos', 'List');
+const Details = loadView(moduleGetter, 'videos', 'Details');
 
 export default createStackNavigator({
-  PhotosList: List,
-  PhotosDetails: Details,
+  VideosList: List,
+  VideosDetails: Details,
 });

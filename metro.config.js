@@ -14,4 +14,7 @@ module.exports = {
       },
     }),
   },
+  resolver: {
+    resolverMainFields: ['tsSource', 'main'],
+  },
 };
